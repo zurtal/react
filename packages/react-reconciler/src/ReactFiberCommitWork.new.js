@@ -2801,6 +2801,11 @@ function commitPassiveMountOnFiber(
           }
         }
       }
+
+      if (enableTransitionTracing) {
+        // TODO: Add code to actually process the update queue
+        finishedWork.updateQueue = null;
+      }
       break;
     }
     case CacheComponent: {
